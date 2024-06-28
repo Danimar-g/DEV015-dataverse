@@ -41,5 +41,5 @@ const filtrarAño20 = dataFunctions.filterByEpocaCuatro();
 selector2020.innerHTML = filtrarAño20;
 }
 selector2020.addEventListener("click", filtrarAño2020);
-
+;
 
