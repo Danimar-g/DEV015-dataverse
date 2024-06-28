@@ -16,5 +16,4 @@ filterByEpocaCuatro = (data) => {
     return data.filter(data => data.facts.estreno >= 2020 && data.facts.estreno <=2029);
    },
 },
-; 
 
