@@ -380,7 +380,7 @@ export default [
     "description": "Un niño que es adoptado por una familia de gorilas después de la muerte de sus padres en un naufragio. A medida que crece, Tarzán desarrolla habilidades extraordinarias y se adapta a la vida en la selva. Su vida cambia cuando conoce a Jane, una exploradora y científica, y se enfrenta a la amenaza de los cazadores furtivos que buscan explotar la naturaleza. La película, dirigida por Chris Buck y Kevin Lima, destaca por su animación impresionante, la icónica banda sonora de Phil Collins y su mensaje sobre la importancia del respeto hacia la naturaleza y la diversidad cultural.",
     "imageUrl": "https://es.web.img3.acsta.net/pictures/14/03/17/11/47/596263.jpg",
     "facts": {
-      "estreno": "1993",
+      "estreno": "1999",
       "generoPelicula": "Aventura, Drama",
       "clasificacionPelicula": "Identidad",
       "clasificPublico": "7.3/10",
