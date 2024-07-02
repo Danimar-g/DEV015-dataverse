@@ -1,44 +1,48 @@
-import { renderItems } from './view.js';
+import { renderItems } from "./view.js";
 
-import data from './data/dataset.js';
+import data from "./data/dataset.js";
 
-
+import dataFunctions from "./dataFunctions.js";
 
 const elementos = document.getElementById("disneyinfo");
 const listaDePeliculas = renderItems(data);
 elementos.appendChild(listaDePeliculas);
 
-
-const selector90 = document.querySelector('option[value="1990"]');
-const selector2000 = document.querySelector('option[value="2000"]');
-const selector2010 = document.querySelector('option[value="2010"]');
-const selector2020 = document.querySelector('option[value="2020"]');
-
-//Crear función de filtrado
-//aplicar la función de filtrado de los 90 al selector de los 90
-//decirle que al hacer click al selector de los 90 se aplique el filtrado
+const selectores = document.querySelector("#epoca");
 
 function filtrarAño90() {
-const filtrarAño90 = dataFunctions.filterByEpocaUno();
-selector90.innerHTML = filtrarAño90;
+  const copyData = data;
+  const filtrarAño90 = dataFunctions.filterByEpocaUno(copyData);
+  const listaDePeliculas1 = renderItems(filtrarAño90);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaDePeliculas1);
 }
-selector90.addEventListener("click", filtrarAño90);
+selectores.addEventListener("change", filtrarAño90);
 
-function filtrarAño2000() {
-const filtrarAño00 = dataFunctions.filterByEpocaDos();
-selector2000.innerHTML = filtrarAño00;
+function filtrarAño00() {
+  const copyData = data;
+  const filtrarAño00 = dataFunctions.filterByEpocaDos(copyData);
+  const listaDePeliculas2 = renderItems(filtrarAño00);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaDePeliculas2);
 }
-selector2000.addEventListener("click", filtrarAño2000);
+selectores.addEventListener("change", filtrarAño00);
 
-function filtrarAño2010() {
-const filtrarAño10 = dataFunctions.filterByEpocaTres();
-selector2010.innerHTML = filtrarAño10;
+function filtrarAño10() {
+  const copyData = data;
+  const filtrarAño10 = dataFunctions.filterByEpocaTres(copyData);
+  const listaDePeliculas3 = renderItems(filtrarAño10);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaDePeliculas3);
 }
-selector2010.addEventListener("click", filtrarAño2010);
+selectores.addEventListener("change", filtrarAño10);
 
-function filtrarAño2020(){
-const filtrarAño20 = dataFunctions.filterByEpocaCuatro();
-selector2020.innerHTML = filtrarAño20;
+function filtrarAño20() {
+  const copyData = data;
+  const filtrarAño20 = dataFunctions.filterByEpocaCuatro(copyData);
+  const listaDePeliculas4 = renderItems(filtrarAño20);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaDePeliculas4);
 }
-selector2020.addEventListener("click", filtrarAño2020);
-;
+selectores.addEventListener("change", filtrarAño20);
+
