@@ -23,15 +23,19 @@ const dataFunctions = {
     );
   },
 
-  SortByName: (data) => {
-    data.name.toSorted((a, b) => a.localeCompare(b, "es"));
-  },
-
-  ReversebyName: (data) => {
-    const arregloOrdenado = data.name.toSorted((a, b) =>
+  sortByName: (data) => {
+    const nombresOrdenados = data.sort((a, b) =>
       a.name.localeCompare(b.name, "es")
     );
-    return arregloOrdenado.reverse();
+    return nombresOrdenados;
+  },
+
+  reverseByName: (data) => {
+    const arregloOrdenado = data.sort((a, b) =>
+      b.name.localeCompare(a.name, "es")
+    );
+    return arregloOrdenado;
   },
 };
+
 export default dataFunctions;
