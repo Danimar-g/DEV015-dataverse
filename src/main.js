@@ -90,5 +90,5 @@ selectoresOrden.addEventListener("change", (e) => {
     break;
   default:
     break;
-  }
+  },
 });
