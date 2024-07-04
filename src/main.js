@@ -77,7 +77,7 @@ selectores.addEventListener("change", (event) => {
   default:
     break;
   }
-});
+}),
 
 selectoresOrden.addEventListener("change", (e) => {
   const valor = e.target.value;

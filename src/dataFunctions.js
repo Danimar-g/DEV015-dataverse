@@ -37,5 +37,6 @@ const dataFunctions = {
     return arregloOrdenado;
   },
 };
+,
 
 export default dataFunctions;
