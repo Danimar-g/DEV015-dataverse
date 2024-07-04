@@ -45,7 +45,7 @@ function filtrarAño20() {
 
 function ordenarAZ() {
   const copyData = data;
-  const ordenarAscendente = data.dataFunctions.sortByName(copyData);
+  const ordenarAscendente = dataFunctions.sortByName(copyData);
   const listaNombre1 = renderItems(ordenarAscendente);
   selectoresOrden.innerHTML = "";
   selectoresOrden.appendChild(listaNombre1);
@@ -53,7 +53,7 @@ function ordenarAZ() {
 
 function ordenarZA() {
   const copyData = data;
-  const ordenarDescendente = data.dataFunctions.reverseByName(copyData);
+  const ordenarDescendente = dataFunctions.reverseByName(copyData);
   const listaNombre2 = renderItems(ordenarDescendente);
   selectoresOrden.innerHTML = "";
   selectoresOrden.appendChild(listaNombre2);
@@ -77,7 +77,7 @@ selectores.addEventListener("change", (event) => {
   default:
     break;
   }
-});
+}),
 
 selectoresOrden.addEventListener("change", (e) => {
   const valor = e.target.value;
