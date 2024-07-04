@@ -47,7 +47,7 @@ function ordenarAZ() {
   const copyData = data;
   const ordenarAscendente = dataFunctions.sortByName(copyData);
   const listaNombre1 = renderItems(ordenarAscendente);
-  /*selectoresOrden.innerHTML = "";*/
+  selectoresOrden.innerHTML = "";
   selectoresOrden.appendChild(listaNombre1);
 }
 
@@ -55,7 +55,7 @@ function ordenarZA() {
   const copyData = data;
   const ordenarDescendente = dataFunctions.reverseByName(copyData);
   const listaNombre2 = renderItems(ordenarDescendente);
-  //selectoresOrden.innerHTML = "";
+  selectoresOrden.innerHTML = "";
   selectoresOrden.appendChild(listaNombre2);
 }
 
@@ -90,5 +90,5 @@ selectoresOrden.addEventListener("change", (e) => {
     break;
   default:
     break;
-  },
+  }
 });
