@@ -45,7 +45,7 @@ function filtrarAño20() {
 }
 
 function ordenarAZ() {
-  const copyData = data;
+  const copyData =[...data];
   const ordenarAscendente = dataFunctions.sortByName(copyData);
   const listaNombre1 = renderItems(ordenarAscendente);
   elementos.innerHTML = "";
@@ -53,7 +53,7 @@ function ordenarAZ() {
 }
 
 function ordenarZA() {
-  const copyData = data;
+  const copyData =[...data];
   const ordenarDescendente = dataFunctions.reverseByName(copyData);
   const listaNombre2 = renderItems(ordenarDescendente);
   elementos.innerHTML = "";
