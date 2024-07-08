@@ -12,7 +12,6 @@ body {
   background-image: url("https://wallpapers-clan.com/wp-content/uploads/2022/09/disney-castle-blue-wallpaper-2-scaled.jpg");
   image-rendering: center;
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: bolder;
   color: #ffd034;
 }
 
@@ -114,7 +113,6 @@ button {
 
 .tarjeta {
   font-family: "Comic Neue", cursiva;
-  font-weight: bolder;
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.5);
@@ -123,7 +121,7 @@ button {
   text-align: justify;
   margin: 1px;
   padding: 1px 1px;
-  text-align: justify, left;
+  border-radius: 20px;
   color: black;
   }
 
@@ -136,3 +134,7 @@ button {
     text-align: center;
   }
 
+  #disneyinfo{
+    margin-top: 32px;
+    margin-bottom: 64px;
+  }
