@@ -125,21 +125,14 @@ button {
   padding: 1px 1px;
   text-align: justify, left;
   color: black;
-  cursor: pointer;
-  border-radius: 20px;
-  flex-direction: row-reverse;
-  align-items: center;
-}
+  }
 
-main {
-  margin-bottom: 10px;
-}
+  footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2%;
+    text-align: center;
+  }
 
-footer {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  padding: 2%;
-  text-align: center;
-}

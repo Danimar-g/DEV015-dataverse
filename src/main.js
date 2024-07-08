@@ -10,6 +10,7 @@ elementos.appendChild(listaDePeliculas);
 
 const selectores = document.querySelector("#epoca");
 const selectoresOrden = document.querySelector("#nombre");
+const botonborrar = document.getElementById("borrar");
 
 function filtrarAño90() {
   const copyData = data;
@@ -47,16 +48,22 @@ function ordenarAZ() {
   const copyData =[...data];
   const ordenarAscendente = dataFunctions.sortByName(copyData);
   const listaNombre1 = renderItems(ordenarAscendente);
-  selectoresOrden.innerHTML = "";
-  selectoresOrden.appendChild(listaNombre1);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaNombre1);
 }
 
 function ordenarZA() {
   const copyData =[...data];
   const ordenarDescendente = dataFunctions.reverseByName(copyData);
   const listaNombre2 = renderItems(ordenarDescendente);
-  selectoresOrden.innerHTML = "";
-  selectoresOrden.appendChild(listaNombre2);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaNombre2);
+}
+
+function borrarFiltrosYOrden() {
+  const listaOriginal = renderItems(data);
+  elementos.innerHTML = "";
+  elementos.appendChild(listaOriginal);
 }
 
 selectores.addEventListener("change", (event) => {
@@ -77,7 +84,7 @@ selectores.addEventListener("change", (event) => {
   default:
     break;
   }
-}),
+});
 
 selectoresOrden.addEventListener("change", (e) => {
   const valor = e.target.value;
@@ -92,3 +99,5 @@ selectoresOrden.addEventListener("change", (e) => {
     break;
   }
 });
+
+botonborrar.addEventListener("click", borrarFiltrosYOrden);
