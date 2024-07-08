@@ -1,4 +1,5 @@
 const dataFunctions = {
+
   filterByEpocaUno: (data) => {
     return data.filter(
       (data) => data.facts.estreno >= 1990 && data.facts.estreno <= 1999
@@ -25,18 +26,17 @@ const dataFunctions = {
 
   sortByName: (data) => {
     const nombresOrdenados = data.sort((a, b) =>
-      a.name.localeCompare(b.name, "es")
+      a.name.localeCompare(b.name)
     );
     return nombresOrdenados;
   },
 
   reverseByName: (data) => {
     const arregloOrdenado = data.sort((a, b) =>
-      b.name.localeCompare(a.name, "es")
+      b.name.localeCompare(a.name)
     );
     return arregloOrdenado;
   },
 };
-,
 
 export default dataFunctions;
