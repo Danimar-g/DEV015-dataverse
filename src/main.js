@@ -13,7 +13,7 @@ const selectoresOrden = document.querySelector("#nombre");
 const botonborrar = document.getElementById("borrar");
 
 function filtrarAño90() {
-  const copyData = data;
+  const copyData =[...data];
   const filtrarAño90 = dataFunctions.filterByEpocaUno(copyData);
   const listaDePeliculas1 = renderItems(filtrarAño90);
   elementos.innerHTML = "";
@@ -21,7 +21,7 @@ function filtrarAño90() {
 }
 
 function filtrarAño00() {
-  const copyData = data;
+  const copyData =[...data];
   const filtrarAño00 = dataFunctions.filterByEpocaDos(copyData);
   const listaDePeliculas2 = renderItems(filtrarAño00);
   elementos.innerHTML = "";
@@ -29,7 +29,7 @@ function filtrarAño00() {
 }
 
 function filtrarAño10() {
-  const copyData = data;
+  const copyData =[...data];
   const filtrarAño10 = dataFunctions.filterByEpocaTres(copyData);
   const listaDePeliculas3 = renderItems(filtrarAño10);
   elementos.innerHTML = "";
@@ -37,7 +37,7 @@ function filtrarAño10() {
 }
 
 function filtrarAño20() {
-  const copyData = data;
+  const copyData =[...data];
   const filtrarAño20 = dataFunctions.filterByEpocaCuatro(copyData);
   const listaDePeliculas4 = renderItems(filtrarAño20);
   elementos.innerHTML = "";
@@ -45,7 +45,7 @@ function filtrarAño20() {
 }
 
 function ordenarAZ() {
-  const copyData = data;
+  const copyData =[...data];
   const ordenarAscendente = dataFunctions.sortByName(copyData);
   const listaNombre1 = renderItems(ordenarAscendente);
   elementos.innerHTML = "";
@@ -53,7 +53,7 @@ function ordenarAZ() {
 }
 
 function ordenarZA() {
-  const copyData = data;
+  const copyData =[...data];
   const ordenarDescendente = dataFunctions.reverseByName(copyData);
   const listaNombre2 = renderItems(ordenarDescendente);
   elementos.innerHTML = "";
@@ -64,6 +64,8 @@ function borrarFiltrosYOrden() {
   const listaOriginal = renderItems(data);
   elementos.innerHTML = "";
   elementos.appendChild(listaOriginal);
+  selectores.selectedIndex=0;
+  selectoresOrden.selectedIndex=0;
 }
 
 selectores.addEventListener("change", (event) => {
@@ -101,3 +103,4 @@ selectoresOrden.addEventListener("change", (e) => {
 });
 
 botonborrar.addEventListener("click", borrarFiltrosYOrden);
+
