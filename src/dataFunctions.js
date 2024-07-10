@@ -63,6 +63,20 @@ const dataFunctions = {
         })
       })
     */
+     const arregloEstadisticaGenero = [];
+    
+     data.forEach(pelicula => {
+      const generos = pelicula.facts.generoPelicula.split(', ');
+      generos.forEach(genero => {
+        const dato = arregloEstadisticaGenero.find(elem => elem.genero === genero)
+        if (dato) {
+          dato.cantidad = dato.cantidad +1;
+        }
+        else{
+          arregloEstadisticaGenero.push({genero: genero, cantidad: 1});
+        }
+      })
+     })
      
   },
 };
