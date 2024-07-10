@@ -12,12 +12,6 @@ const selectores = document.querySelector("#epoca");
 const selectoresOrden = document.querySelector("#nombre");
 const botonborrar = document.getElementById("borrar");
 
-const datoDuracion = document.querySelector("duracion");
-const datoNota = document.querySelector("nota");
-const datoGenero = document.querySelector("genero");
-
-const datosEstadistica = document.getElementById("datos-estadisticas")
-datosEstadistica.appendChild(renderDatosEstadistica());
 
 function filtrarAño90() {
   const copyData =[...data];
@@ -75,23 +69,24 @@ function borrarFiltrosYOrden() {
   selectoresOrden.selectedIndex=0;
 }
 
-function renderDatosEstadistica() { 
+/*function renderDatosEstadistica() { 
   const ulDatos = document.createElement("ul");
   ulDatos.classList.add("datosDisneyPixar");
 
   const liDatos = document.createElement("li");
   liDatos.classList.add("datosEstadisticos")
   liDatos.innerHTML = ``
-}
+}*/
   
-//const copyData = [...data];
+const copyData = [...data];
 
-/*const stats = dataFunctions.computeStats(copyData)
-  const promedioDuracion = stats.sumaTotalDuracion/copyData.length;
-  datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + promedioDuracion;
+const stats = dataFunctions.computeStats(copyData)
+const datoDuracion = document.querySelector("#duracion");
+const datoNota = document.querySelector("#nota");
+//const datoGenero = document.querySelector("#genero");
 
-  const promedioNota = stats.sumaTotalNota/copyData.length;
-  datoNota.innerHTML ="El promedio de nota de las peliculas es: " + promedioNota;*/
+datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + stats.sumaTotalDuracion/copyData.length + " minutos";
+datoNota.innerHTML = "El promedio de nota de las peliculas es: " + stats.sumaTotalNota/copyData.length;
 
 //const porcentajeGenero = dataFunctions.computeStats(copyData);
 //datoGenero.innerHTML = porcentajeGenero + "es el género que más abunda";
