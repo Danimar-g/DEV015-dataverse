@@ -30,6 +30,67 @@ h3 {
   font-size: 25px;
 }
 
+.botonDatos {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 100%;
+  color: black;
+  background-color: #fcf0c6;
+  padding: 10px;
+  border: solid;
+  border-color: #ffd034;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#datosestadisticos {
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.datosdisney {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.datosdisney li {
+  flex: 1; 
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.datosdisney li#duracion {
+  background-color: #fcf0c6;
+  color:#000;
+}
+
+.datosdisney li#nota {
+  background-color: #fcf0c6;
+  color: #000;
+}
+
 .selectores{
     display: flex;
     justify-content: center;
@@ -86,6 +147,7 @@ button {
   padding: 0;
   margin: 0;
   margin-top: 16px;
+  justify-content: center;
 }
 
 .contenedorContenido {

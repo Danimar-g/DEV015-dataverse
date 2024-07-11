@@ -42,45 +42,16 @@ const dataFunctions = {
 
   computeStats: (data) => {
     const sumaTotalDuracion = data.reduce((acumulador, pelicula) => acumulador + Number(pelicula.facts.tiempoDuracion.split(" ")[0]), 0);
-    const sumaTotalNota = data.reduce((acumulador, pelicula) => acumulador + Number(pelicula.facts.clasificPublico.split("/")[0]), 0);
-    return {sumaTotalDuracion, sumaTotalNota};
-  },
-
-  computeStatsGender: (data) => {
-    /*
-      arreglo de objetos donde el primer dato es el genero y segundo dato es la cantidad
-      resultado esperado: [{genero: 'accion', cantidad: 10}, {genero: 'comedia', cantidad: 8}, {genero: 'drama', cantidad: 5}]
-      arregloEstadisticaGenero = [];
-      data.forEach(pelicula => {
-        const generos = pelicula.facts.generoPelicula.split(', ');
-        generos.forEach(genero => {
-          const dato = arregloEstadisticaGenero.find(elem => elem.genero === genero)
-          if (dato) {
-            dato.cantidad = dato.cantidad + 1;
-          } else {
-            arregloEstadisticaGenero.push({genero: genero, cantidad: 1});
-          }
-        })
-      })
-    */
-     const arregloEstadisticaGenero = [];
     
-     data.forEach(pelicula => {
-      const generos = pelicula.facts.generoPelicula.split(', ');
-      generos.forEach(genero => {
-        const dato = arregloEstadisticaGenero.find(elem => elem.genero === genero)
-        if (dato) {
-          dato.cantidad = dato.cantidad +1;
-        }
-        else{
-          arregloEstadisticaGenero.push({genero: genero, cantidad: 1});
-        }
-      })
-     })
-     
+    return sumaTotalDuracion/data.length;
   },
-};
+  
+  computeStatsNota: (data) => {
+    const sumaTotalNota = data.reduce((acumulador, pelicula) => acumulador + Number(pelicula.facts.clasificPublico.split("/")[0]), 0);
+     const promedioNota= sumaTotalNota/data.length;
 
+    return promedioNota.toFixed(1);
+  },
 
-
+}
 export default dataFunctions;
