@@ -80,16 +80,11 @@ function borrarFiltrosYOrden() {
   
 const copyData = [...data];
 
-const stats = dataFunctions.computeStats(copyData)
 const datoDuracion = document.querySelector("#duracion");
 const datoNota = document.querySelector("#nota");
-//const datoGenero = document.querySelector("#genero");
 
-datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + stats.sumaTotalDuracion/copyData.length + " minutos";
-datoNota.innerHTML = "El promedio de nota de las peliculas es: " + stats.sumaTotalNota/copyData.length;
-
-//const porcentajeGenero = dataFunctions.computeStats(copyData);
-//datoGenero.innerHTML = porcentajeGenero + "es el género que más abunda";
+datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + dataFunctions.computeStats(copyData) + " minutos";
+datoNota.innerHTML = "El promedio de nota de las peliculas es: " + dataFunctions.computeStatsNota(copyData);
 
 
 selectores.addEventListener("change", (event) => {
