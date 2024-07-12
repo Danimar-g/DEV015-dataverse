@@ -11,8 +11,9 @@ elementos.appendChild(listaDePeliculas);
 const selectores = document.querySelector("#epoca");
 const selectoresOrden = document.querySelector("#nombre");
 const botonborrar = document.getElementById("borrar");
+const botonData = document.getElementById("datosestadisticosDisney");
 
-
+//function filtro if value 
 function filtrarAño90() {
   const copyData =[...data];
   const filtrarAño90 = dataFunctions.filterByEpocaUno(copyData);
@@ -68,31 +69,24 @@ function borrarFiltrosYOrden() {
   selectores.selectedIndex=0;
   selectoresOrden.selectedIndex=0;
 }
-
-/*function renderDatosEstadistica() { 
-  const ulDatos = document.createElement("ul");
-  ulDatos.classList.add("datosDisneyPixar");
-
-  const liDatos = document.createElement("li");
-  liDatos.classList.add("datosEstadisticos")
-  liDatos.innerHTML = ``
-}*/
   
-const copyData = [...data];
+function datosEstadisticos() {
+  const copyData = [...data];
 
-const stats = dataFunctions.computeStats(copyData)
-const datoDuracion = document.querySelector("#duracion");
-const datoNota = document.querySelector("#nota");
-//const datoGenero = document.querySelector("#genero");
+  const datoDuracion = document.querySelector("#duracion");
+  const datoNota = document.querySelector("#nota");
 
-datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + stats.sumaTotalDuracion/copyData.length + " minutos";
-datoNota.innerHTML = "El promedio de nota de las peliculas es: " + stats.sumaTotalNota/copyData.length;
+  datoDuracion.innerHTML = "Las peliculas, en promedio, duran: " + dataFunctions.computeStats(copyData) + " minutos.";
+  datoNota.innerHTML = "En promedio, la calificación es de: " + dataFunctions.computeStatsNota(copyData) + " según IMDb.";
+}
 
-//const porcentajeGenero = dataFunctions.computeStats(copyData);
-//datoGenero.innerHTML = porcentajeGenero + "es el género que más abunda";
+const contenido = document.querySelector('.contenido-oculto');
+botonData.addEventListener("click", ()=> {
+  datosEstadisticos();
+  contenido.style.display = 'block';
+});
 
-
-selectores.addEventListener("change", (event) => {
+selectores.addEventListener("change", (event) => { //data,año, value (en vez de switch usar if)
   const valor = event.target.value;
   switch (valor) {
   case "1990":

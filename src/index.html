@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dataverse</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +28,12 @@
 </header>
 <body>
   <main>
-    <h2>Aquí encontrarás una guía de distintas peliculas de Disney y Pixar</h2>
+    <h2>¡Bienvenid@s a dreamland!, una página para los fanaticos de Disney y Pixar, aquí puedes encontrar información sobre sus películas"
+      Puedes buscar por épocas, ordenarlas en orden alfabético y si quieres, puedes tener curiosidades apretando en el botón de ¿sabías qué?
+    </h2>
 
     <div class="selectores">
-      <label for="epoca">Seleccionar por épocas</label>
+      <label for="epoca"><b> Selecciona por épocas</b></label>
       <select id="epoca" data-testid="select-filter" name="epocas">
       <option value="0">Seleccionar</option>
       <option value="1990">1990</option>
@@ -39,7 +42,7 @@
       <option value="2020">2020</option>
     </select>
 
-      <label for="nombre">Ordenar por nombre</label>
+      <label for="nombre"><b>Ordena por nombre</b></label>
       <select id="nombre" data-testid="select-sort" name="name">
         <option value="inicio">Ordenar</option>
         <option value="Asc">A - Z</option>
@@ -49,13 +52,13 @@
       <button id="borrar" data-testid="button-clear">Limpiar Filtros</button>
     </div>
     <div id="datosestadisticos">
-      <h2>¿Sabías qué?</h2>
+     <button id="datosestadisticosDisney" class="botonDatos">¿Sabías qué?</button>
+     <div class="contenido-oculto">
       <ul class="datosdisney">
-        <li id="duracion">promedio duración</li>
-        <li id="nota">promedio notas</li>
-        <li id="genero">porcentaje género</li>
+        <li id="duracion">El promedio de duración es:</li>
+        <li id="nota">El promedio de clasificación es:</li>
       </ul> 
-      
+      </div>
     </div>
     <div id="disneyinfo"></div>
     
@@ -63,6 +66,7 @@
   </main>
   <footer>
     <p><b>Creado por Camila Carreño y Daniela Martínez</b></p>
+    <b><p>Proyecto Dataverse para Laboratoria. <em>La información de esta página está proporcionado por Disney y Pixar, quienes tiene derechos exclusivos del contenido.</em></p></b>
   </footer>
   <script src="main.js" type="module"></script>
 </body>
