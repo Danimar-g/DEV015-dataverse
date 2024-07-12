@@ -1,5 +1,12 @@
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */
+
+/*export const filterData = (data, filterBy,value) => {
+  const resultFilter = data.filter((item)=> {
+    return item.facts[filterBy] >= value && item.facts[filterBy] <= value;
+  })
+  return resultFilter;
+}*/
 const dataFunctions = {
 
   filterByEpocaUno: (data) => {
@@ -29,6 +36,7 @@ const dataFunctions = {
   sortByName: (data) => {
     const nombresOrdenados = data.sort((a, b) =>
       a.name.localeCompare(b.name)
+  //cambiar name por sortby igual que en el filtro, luego comparar si sortby es === a ascendente retorna data ordenada , else data ordenada.reverse
     );
     return nombresOrdenados;
   },

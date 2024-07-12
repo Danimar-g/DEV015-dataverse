@@ -13,7 +13,7 @@ const selectoresOrden = document.querySelector("#nombre");
 const botonborrar = document.getElementById("borrar");
 const botonData = document.getElementById("datosestadisticosDisney");
 
-
+//function filtro if value 
 function filtrarAño90() {
   const copyData =[...data];
   const filtrarAño90 = dataFunctions.filterByEpocaUno(copyData);
@@ -86,7 +86,7 @@ botonData.addEventListener("click", ()=> {
   contenido.style.display = 'block';
 });
 
-selectores.addEventListener("change", (event) => {
+selectores.addEventListener("change", (event) => { //data,año, value (en vez de switch usar if)
   const valor = event.target.value;
   switch (valor) {
   case "1990":
