@@ -1,11 +1,15 @@
-header {
-  font-family: "Aclonica", sans-serif;
-  font-weight: 400;
+@font-face {
+  font-family: fuenteDisney;
+  src: url(./assets/DisneyFont.ttf);
+}
+
+h1 {
+  font-family: fuenteDisney, sans-serif;
   font-style: normal;
-  font-size: 60px;
+  font-size: 100px;
   text-align: center;
-  color: #ffd034;
-  text-shadow: 4px 4px 0 #fcf0c6;
+  color: #a9d1f1;
+  text-shadow: 4px 4px 0 #7278b8;
 }
 
 body {
@@ -28,6 +32,7 @@ h3 {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
+  margin-top: 0;
 }
 
 .botonDatos {
@@ -41,54 +46,61 @@ h3 {
   font-weight: bold;
   cursor: pointer;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+}
+
+.contenido-oculto{
+  display: none;
 }
 
 #datosestadisticos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 600px; 
   margin: 0 auto; 
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 .datosdisney {
   list-style-type: none;
-  padding: 0;
+  padding: 16px;
   display: flex;
-  gap: 10px;
+  gap: 32px;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .datosdisney li {
   flex: 1; 
   padding: 10px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 64px;
 }
 
 .datosdisney li#duracion {
   background-color: #fcf0c6;
   color:#000;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 .datosdisney li#nota {
   background-color: #fcf0c6;
   color: #000;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 .selectores{
@@ -159,7 +171,7 @@ button {
 .contenedorImagen {
   display: flex;
   justify-content: center;
-  margin-left: 16px;
+  
 }
 
 .contenedorTextos {
@@ -169,8 +181,8 @@ button {
 }
 
 .imagenPeli {
-  width: 10rem;
-  height: auto;
+  height: 240px;
+   width: auto;
 }
 
 .tarjeta {
@@ -179,10 +191,10 @@ button {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.5);
   gap: 16px;
-  width: calc(50% - 32px);
+  width: calc(50% - 64px);
   text-align: justify;
   margin: 1px;
-  padding: 1px 1px;
+  padding: 16px;
   border-radius: 20px;
   color: black;
   }
@@ -199,4 +211,7 @@ button {
   #disneyinfo{
     margin-top: 32px;
     margin-bottom: 64px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
   }

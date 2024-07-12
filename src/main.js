@@ -11,6 +11,7 @@ elementos.appendChild(listaDePeliculas);
 const selectores = document.querySelector("#epoca");
 const selectoresOrden = document.querySelector("#nombre");
 const botonborrar = document.getElementById("borrar");
+const botonData = document.getElementById("datosestadisticosDisney");
 
 
 function filtrarAño90() {
@@ -68,24 +69,22 @@ function borrarFiltrosYOrden() {
   selectores.selectedIndex=0;
   selectoresOrden.selectedIndex=0;
 }
-
-/*function renderDatosEstadistica() { 
-  const ulDatos = document.createElement("ul");
-  ulDatos.classList.add("datosDisneyPixar");
-
-  const liDatos = document.createElement("li");
-  liDatos.classList.add("datosEstadisticos")
-  liDatos.innerHTML = ``
-}*/
   
-const copyData = [...data];
+function datosEstadisticos() {
+  const copyData = [...data];
 
-const datoDuracion = document.querySelector("#duracion");
-const datoNota = document.querySelector("#nota");
+  const datoDuracion = document.querySelector("#duracion");
+  const datoNota = document.querySelector("#nota");
 
-datoDuracion.innerHTML = "En promedio, las peliculas de disney duran: " + dataFunctions.computeStats(copyData) + " minutos";
-datoNota.innerHTML = "El promedio de nota de las peliculas es: " + dataFunctions.computeStatsNota(copyData);
+  datoDuracion.innerHTML = "Las peliculas, en promedio, duran: " + dataFunctions.computeStats(copyData) + " minutos.";
+  datoNota.innerHTML = "En promedio, la calificación es de: " + dataFunctions.computeStatsNota(copyData) + " según IMDb.";
+}
 
+const contenido = document.querySelector('.contenido-oculto');
+botonData.addEventListener("click", ()=> {
+  datosEstadisticos();
+  contenido.style.display = 'block';
+});
 
 selectores.addEventListener("change", (event) => {
   const valor = event.target.value;
