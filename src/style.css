@@ -29,6 +29,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -178,6 +179,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
+  font-size: 110%;
 }
 
 .imagenPeli {
@@ -189,7 +191,7 @@ button {
   font-family: "Comic Neue", cursiva;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   gap: 16px;
   width: calc(50% - 64px);
   text-align: justify;
@@ -199,16 +201,16 @@ button {
   color: black;
   }
 
-  footer {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 2%;
-    text-align: center;
-  }
+footer {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+}
 
-  #disneyinfo{
+ #disneyinfo{
     margin-top: 32px;
     margin-bottom: 64px;
     max-width: 1400px;

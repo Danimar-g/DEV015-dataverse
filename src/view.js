@@ -7,7 +7,7 @@ export const renderItems = (data) => {
     li.classList.add("tarjeta")
     li.innerHTML = `
     <div itemscope itemtype="peliculasDisneyPixar">
-      <div class="titulo"><h3 itemprop="name"> ${pelicula.name} </h3> </div>
+      <div class="tituloPeli"><h3 itemprop="name"> ${pelicula.name} </h3> </div>
       <div class="contenedorContenido">
       <div class="contenedorImagen"><img class="imagenPeli" src="${pelicula.imageUrl}" alt="${pelicula.id}"></div>
       <div class="contenedorTextos">

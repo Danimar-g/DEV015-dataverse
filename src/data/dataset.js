@@ -341,7 +341,7 @@ export default [
   },
   {
     "id": "mulan-1998",
-    "name": "Mulan",
+    "name": "Mulán",
     "shortDescription": "Una joven valiente se disfraza de guerrero para salvar a su familia y su patria. Inspiradora, y llena de valor",
     "description": "Mulán es una joven china que decide tomar el lugar de su anciano padre en el ejército imperial, haciéndose pasar por un hombre. Con la ayuda de su dragón guardián, Mushu, y un grupo de soldados divertidos, Mulán se enfrenta a desafíos tanto físicos como emocionales mientras lucha contra los invasores hunos liderados por Shan Yu. La película no solo es una epopeya de acción y aventura, sino también un poderoso relato sobre el valor, la determinación y el respeto por la familia y la tradición.",
     "imageUrl": "https://www.lavanguardia.com/peliculas-series/images/movie/poster/1998/6/w1280/towmTJ0k29quKI9IDnOZKAAtQx.jpg",
@@ -375,7 +375,7 @@ export default [
   },
   {
     "id": "tarzan-1999",
-    "name": "Tarzan",
+    "name": "Tarzán",
     "shortDescription": "Una emocionante aventura animada sobre un niño criado por gorilas en la jungla africana.",
     "description": "Un niño que es adoptado por una familia de gorilas después de la muerte de sus padres en un naufragio. A medida que crece, Tarzán desarrolla habilidades extraordinarias y se adapta a la vida en la selva. Su vida cambia cuando conoce a Jane, una exploradora y científica, y se enfrenta a la amenaza de los cazadores furtivos que buscan explotar la naturaleza. La película, dirigida por Chris Buck y Kevin Lima, destaca por su animación impresionante, la icónica banda sonora de Phil Collins y su mensaje sobre la importancia del respeto hacia la naturaleza y la diversidad cultural.",
     "imageUrl": "https://es.web.img3.acsta.net/pictures/14/03/17/11/47/596263.jpg",
