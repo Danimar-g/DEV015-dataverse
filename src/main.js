@@ -2,10 +2,8 @@ import { renderItems } from "./view.js";
 
 import data from "./data/dataset.js";
 
-import {filterData} from "./dataFunctions.js";
-import { sortData } from "./dataFunctions.js";
-import { computeStats } from "./dataFunctions.js";
-import { computeStatsNota } from "./dataFunctions.js";
+import { filterData, sortData } from "./dataFunctions.js";
+import { computeStats, computeStatsNota } from "./dataFunctions.js";
 
 const elementos = document.getElementById("disneyinfo");
 const listaDePeliculas = renderItems(data);
@@ -26,6 +24,12 @@ selectoresEpoca.addEventListener("change", (event) => {
     dataFiltrada = filterData(data, "estreno", valor)
   }
   
+  const valorOrden = document.getElementById("nombre").value;
+  if (valorOrden !== "orden") {
+    dataFiltrada = sortData(dataFiltrada, "name", valorOrden);
+  }
+
+  
   const listaFiltrada = renderItems(dataFiltrada);
   elementos.innerHTML = "";
   elementos.appendChild(listaFiltrada);
@@ -37,9 +41,15 @@ selectoresOrden.addEventListener("change", (e) => {
   let dataOrdenada;
   if (value === "orden") {
     dataOrdenada = data;
-  } else {
+  }  else {
     dataOrdenada = sortData(data, "name", value);
   }
+
+  const valorFiltro = document.getElementById("epoca").value;
+  if (valorFiltro !== "0") {
+    dataOrdenada = filterData(dataOrdenada, "estreno", valorFiltro);
+  }
+  
   const listaOrdenada = renderItems(dataOrdenada);
   elementos.innerHTML = "";
   elementos.appendChild(listaOrdenada);
