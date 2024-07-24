@@ -39,8 +39,8 @@ Al momento de identificar la información necesaria para crear nuestra página w
 *“Eres una persona que le gustan mucho las películas de Disney y Pixar desde pequeño y deseas buscar información de las películas que te gustan para aumentar el conocimiento de ellas.
 Genera una reseña de la película “Elemental” que sea breve para que pueda ser compartida de manera informativa en una página web. Debe incluir los siguientes datos: una descripción breve de la película, una descripción larga, año de estreno, duración en minutos, clasificación de qué género es, clasificación del público y una clasificación de enseñanza que entrega pero definida en una palabra y un dato curioso.                                                
 Utiliza un lenguaje informativo, cordial y motivador pero que no sea tan extenso.”*
-![prompting1](promp1.jpg)
-![prompting2](promp2.jpg)
+![prompting1](promp1.jpeg)
+![prompting2](promp2.jpeg)
 
 ## Filtrado, orden y datos estadísticos 
 
